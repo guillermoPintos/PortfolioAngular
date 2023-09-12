@@ -1,0 +1,397 @@
+
+
+/* --------------------------- *\
+			GENERALES
+\* --------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+html {
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, sans-serif;
+	background-color: #0f0f0f;
+}
+
+h1, h2, h3 {
+	font-family: 'Fjalla One', sans-serif;
+	font-weight: normal;
+}
+
+.container {
+	max-width: 1024px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+	.container-adorno {
+		width: 1.25rem;
+		height: 100%;
+		background-color: #0074f7;
+		position: absolute;
+	}
+
+	.container-titulo {
+		position: relative;
+	}
+		
+		.titulo-adorno {
+			width: calc(1.25rem*2);
+			height: calc(1.25rem*2);
+			border-radius: 0 50% 50% 0;
+			background-color: #0074f7;
+
+			position: absolute;
+			top: calc(1.25rem*1.5);
+			left: calc(1.25rem/4);
+		}
+		
+		.titulo-texto {
+			margin: 0;
+			margin-left: calc(1.25rem*3.5);
+			padding: calc(1.25rem*2) 0;
+			color: #0074f7;
+
+			font-size: 1.3em;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+/* --------------------------- *\
+			HERO
+\* --------------------------- */
+
+.hero {
+	height: 300px;
+	background-color: #1c2227;
+
+	position: relative;
+	z-index: 500;
+
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+}
+
+	.hero-titulo {
+		color: #ffffff;
+		margin: 0;
+		margin-left: 1.25rem;
+
+		font-size: 2.4em;
+		line-height: 1.6em;
+		letter-spacing: 0.02em;
+	}
+	
+		.hero-titulo span {
+			color: #0074f7;
+		}
+	
+	.hero-imagen-container {
+		width: 100%;
+		height: inherit;
+		margin: 0;
+		
+		position: relative;
+	}
+
+		.hero-imagen {
+			width: inherit;
+			height: inherit;
+			object-fit: cover;
+		}
+		
+		.hero-border-imagen {
+			border-top: 300px solid #1c2227;
+			border-right: 25px solid transparent;
+			position: absolute;
+		}
+/* --------------------------- *\
+		CONOCIMIENTOS
+\* --------------------------- */
+
+.conocimientos {
+	background-color: #ffffff;
+	position: relative;
+	z-index: 200;
+}
+
+	.conocimientos-grilla {
+		padding-top: calc(1.25rem*2);
+		margin: 0 calc(1.25rem*2);
+
+		display: grid;
+		grid-template-columns: 2fr 1fr 2fr;
+	}
+
+		.conocimientos-columna {
+			display: grid;
+			grid-template-rows: repeat(6, 1fr);
+		}
+
+			.conocimientos-elemento {
+				display: flex;
+				justify-content: center;
+			}
+
+				.conocimientos-elemento p {
+					height: fit-content;
+					border-radius: 1em;
+					
+					margin: 0 auto;
+					padding: calc(1.25rem/4) 1.25rem;
+
+					color: #ffffff;
+					background-color: #0074f7;
+
+					font-size: 0.8em;
+					font-weight: 300;
+					}
+
+		.conocimientos-guillermo-container {
+			width: 100%;
+			margin: 0;
+		}
+
+			.conocimientos-guillermo {
+				width: 100%;
+				vertical-align: top;
+			}
+/* --------------------------- *\
+			PORTAFOLIO
+\* --------------------------- */
+
+.portafolio {
+	background-color: #f9f9f9;
+	position: relative;
+	z-index: 400;
+}
+
+	.portafolio-proyecto {
+		margin: 0 calc(1.25rem*2) 1.25rem;
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+		border-radius: calc(1.25rem/4);
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.portafolio-proyecto:last-of-type {
+		margin-bottom: 0;
+	}
+
+		.proyecto-informacion {
+			height: fit-content;
+			margin: 1.25rem;
+			color: #2c2c2c;
+			font-weight: 500;
+		}
+
+			.informacion-titulo {
+				margin: 0;
+				font-size: 2em;
+			}
+
+			.informacion-subtitulo {
+				margin: .8em 0;
+				font-size: 0.9em;
+				color: #848484
+			}
+
+			.informacion-fecha, .informacion-link {
+				margin: .5em 0;
+				font-size: 0.9em;
+				font-weight: 500;
+				
+			}
+			.informacion-fecha span,
+			.informacion-link a {
+				color: #848484
+			}
+
+			.informacion-descripcion {
+				margin: 1.6em 0 0;
+				line-height: 1.6em;
+				letter-spacing: 0.01em;
+			}
+
+		.proyecto-imagen-container {
+			margin: calc(1.25rem/2) 0;
+
+			display: flex;
+			align-items: center;
+		}
+
+			.proyecto-imagen {
+				width: 100%;
+				object-fit: cover;
+			}
+/* --------------------------- *\
+		EXPERIENCIAS
+\* --------------------------- */
+
+.experiencias {
+	background-color: #f9f9f9;
+	position: relative;
+	z-index: 300;
+}
+
+	.experiencias-galeria {
+		margin: 0 calc(1.25rem*2);
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1.25rem;
+	}
+
+		.galeria-experiencia {
+			background-color: #ffffff;
+			border-radius: calc(1.25rem/4);
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+			overflow: hidden;
+		}
+
+			.experiencia-multimedia-container {
+				margin: 0;
+			}
+				
+				.experiencia-multimedia {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+			.experiencia-contenido {
+				margin: 0 calc(1.25rem*1.5);
+				padding: calc(1.25rem*1.5) 1.25rem;
+				border-radius: calc(1.25rem/4);
+				background-color: #f9f9f9;
+
+				position: relative;
+				bottom: calc(1.25rem*1.5);
+
+				display: grid;
+				justify-items: center;
+			}
+
+				.contenido-titulo {
+					margin: 0;
+					margin-bottom: 1em;
+
+					font-size: 1.6em;
+					text-align: center;
+					
+					opacity: 0.8;
+				}
+
+				.contenido-descripcion {
+					margin: 0;
+					margin-bottom: 1.5em;
+					color: #848484;
+
+					font-size: 1.1em;
+					font-weight: 400;
+					letter-spacing: 0.02em;
+					line-height: 1.5em;
+				}
+
+				.contenido-link {
+					width: 70%;
+					margin: 0 15%;
+					height: calc(1.25rem*2);
+					color: #0074f7;
+					cursor: pointer;
+
+					border-radius: calc(1.25rem/4);
+					border: 1px solid #0074f7;
+
+					font-size: 1.2em;
+					letter-spacing: 0.02em;
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+/* --------------------------- *\
+			CONTACTOS
+\* --------------------------- */
+
+.contactos {
+	background-color: #0074f7;
+	position: relative;
+	z-index: 100;
+}
+
+	.contactos .container-adorno { 
+		height: calc(1.25rem*3.5);
+		background-color: #ffffff;
+		/* propiedades restantes en generales.css */
+	}
+
+	.contactos .titulo-adorno {
+		background-color: #f9f9f9;
+		/* propiedades restantes en generales.css */
+	}
+
+	.contactos .titulo-texto {
+		color: #f9f9f9;
+		padding-bottom: 1.25rem;
+		/* propiedades restantes en generales.css */
+	}
+
+	.contactos-grilla {
+		display: grid;
+		grid-auto-flow: column;
+	}
+
+			.formulario-input {
+				width: 50%;
+				height: calc(1.25rem*2);
+				font-size: 1.1em;
+				display: block;
+
+				padding: 0 calc(1.25rem/2);
+				margin-left: calc(1.25rem*3.5);
+				margin-bottom: 1.25rem;
+
+				border: 1px solid #848484;
+				border-radius: calc(1.25rem/4);
+				box-sizing: border-box;
+			}
+
+			.formulario-boton{
+				width: 20%;
+				height: calc(1.25rem*2);
+				cursor: pointer;
+
+				margin-left: calc(1.25rem*3.5);
+				margin-bottom: calc(1.25rem*2);
+
+				border-radius: calc(1.25rem/4);
+				border: 1px solid #ffffff;
+
+				color: #ffffff;
+				background-color: transparent;
+				
+				font-size: 1.2em;
+				letter-spacing: 0.05em;
+			}
+
+		.contactos-redes {
+			display: grid;
+			grid-template-columns: repeat(4, auto);
+			justify-content: space-evenly;
+			align-items: center;
+		}
+
+			.icono {
+				color: #ffffff;
+				font-size: 4em;
+				transition: 150ms;
+			}
+			.icono:hover {
+				transform: scale(.95);
+			}
+
